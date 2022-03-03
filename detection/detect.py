@@ -180,6 +180,7 @@ def detect(opt, model, images, component_pad, device, half,filename, error_loggi
                             label = '%s %.2f' % (names[int(cls)], conf)
                             list_label_image.append(names[int(cls)])
                             plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=1)
+                im0 = im0[:, :, ::-1]
                 t4 = time_synchronized()
                 error_logging.info("--> Plot bbox is finished.(%.3fs)" % (t4 - t3))
 
