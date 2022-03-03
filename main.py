@@ -46,7 +46,7 @@ import asyncio
 app = FastAPI(version="1.0.0", title='Yolov3 inference Swagger',
 			  description="<b>API for performing YOLOv3 inference.</b></br></br>"
 						  "<b>Contact the developers:</b></br>"
-						  "<b>Yanxi.Lin: <a href='mailto:Yanxi.Lin@advantech.com.tw'>Yanxi.Lin@advantech.com.tw</a></b></br>"
+						  "<b>Yanxi.Lin: <a href='mailto:.com.tw'></a></b></br>"
 			 )
 #####################################################
 #	CORS Setting
