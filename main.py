@@ -43,8 +43,8 @@ import asyncio
 #####################################################
 # 	API Release Information (http://127.0.0.1:8888/docs)
 #####################################################
-app = FastAPI(version="1.0.0", title='Yolov3 inference Swagger',
-			  description="<b>API for performing YOLOv3 inference.</b></br></br>"
+app = FastAPI(version="1.0.0", title='YoloR inference Swagger',
+			  description="<b>API for performing YOLOR inference.</b></br></br>"
 						  "<b>Contact the developers:</b></br>"
 						  "<b>Yanxi.Lin: <a href='mailto:.com.tw'></a></b></br>"
 			 )
@@ -61,7 +61,7 @@ app.add_middleware(
 )
 
 #####################################################
-#	Loaded yolov3 model
+#	Loaded yoloR model
 #####################################################
 
 def parse_args():
@@ -92,7 +92,7 @@ error_logging = Error()
 model, device, half = detect.load_model(opt, error_logging)
 
 #####################################################
-#	Detect an image using yolov3
+#	Detect an image using yoloR
 #####################################################
 @app.post('/detect', tags=["POST Method"])
 async def predict_image(component_pad : str = Form(...) , image: UploadFile = File(...)):
